@@ -1,4 +1,5 @@
 require 'pry'
+require "./spec/spec_helper.rb"
 
 # this method returns an array of hashes, which we'll use in the other methods
 def spicy_foods 
@@ -12,13 +13,18 @@ end
 # given an array of spicy foods, **return an array of strings**
 # with the names of each spicy food
 def get_names(spicy_foods)
-  # your code here
+    # your code here
+    spicy_foods.collect do |food|
+      food = 
+  end
 end
 
 # given an array of spicy foods, **return an array of hashes** 
 # where the heat level of the food is greater than 5
 def spiciest_foods(spicy_foods)
   # your code here
+  spiciest_foods = spicy_foods.select do |food|
+    food[:heat_level] > 5
 end
 
 # given an array of spicy foods, **output to the terminal**
@@ -28,6 +34,7 @@ end
 # "hello" * 3 == "hellohellohello"
 def print_spicy_foods(spicy_foods)
   # your code here
+  
 end
 
 # given an array of spicy foods and a string representing a cuisine, **return a single hash**  
@@ -54,4 +61,6 @@ end
 # the average heat level of all the spicy foods in the array
 def average_heat_level(spicy_foods)
   # your code here
+end
+
 end
